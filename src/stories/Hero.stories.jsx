@@ -8,7 +8,11 @@ export default {
   component: Hero,
 };
 
-const title = "Título";
+const title = (<span>
+  A beleza da <strong>vida</strong>
+  <br/>
+  pintada com água
+</span>);
 const children = (
   <ul>
     <li>

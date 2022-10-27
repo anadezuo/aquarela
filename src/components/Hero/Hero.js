@@ -3,6 +3,8 @@ import styled, { css } from "styled-components";
 import PropTypes from "prop-types";
 import { breakAt, BreakpointSize } from "../Breakpoints/Breakpoints";
 
+const colorPrimary = "#ffc107";
+
 const Root = styled.div`
   color: #fff;
   padding: 100px 0;
@@ -15,8 +17,29 @@ const Root = styled.div`
 `;
 
 const Title = styled.h1`
-  font-weight: 700;
+  position: relative;
+  font-weight: 300;
   letter-spacing: 2px;
+  margin-bottom: 25px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid rgba(255, 2555, 255, 0.2);
+  font-size: 2.5rem;
+
+  &::after {
+    content: "";
+    letter-spacing: 2px;
+    position: absolute;
+    left: 0;
+    bottom: 3px;
+    background-color: ${colorPrimary};
+    height: 5px;
+    width: 70px;
+  }
+
+  strong {
+    color: ${colorPrimary};
+    font-weight: 700;
+  }
 `;
 
 const Container = styled.div`
@@ -49,6 +72,7 @@ const Content = styled.div`
   li {
     &::before {
       content: "\\2713\\0020";
+      color: ${colorPrimary};
     }
   }
 `;
@@ -66,7 +90,7 @@ Hero.propTypes = {
   /**
    * Título exemplo da seção
    */
-  title: PropTypes.string.isRequired,
+  title: PropTypes.oneOfType([PropTypes.string, PropTypes.element]).isRequired,
   image: PropTypes.string,
   children: PropTypes.node, // se quiser apenas um elemento, deve ser usuada a opção .element
 };
