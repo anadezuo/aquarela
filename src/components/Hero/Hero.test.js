@@ -3,15 +3,9 @@ import BgPaintingImage from "../../stories/assets/bg-painting.jpg";
 import Hero from "./Hero";
 
 describe("Hero", () => {
-  async function mount({ title, children, image }) {
-    return render(<Hero title={title} children={children} image={image} />);
+  async function mount({ image, children }) {
+    return render(<Hero image={image} children={children} />);
   }
-
-  it("should contain a title", async () => {
-    const title = "My Title";
-    const { getByText } = await mount({ title });
-    expect(getByText(title)).toBeInTheDocument();
-  });
 
   it("should accept a children", async () => {
     const children = "text children";
