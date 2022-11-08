@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@storybook/addon-docs": "^6.5.12",
+    "@storybook/addon-knobs": "^6.4.0",
     "@storybook/addon-viewport": "^6.5.12",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",

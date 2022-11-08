@@ -1,4 +1,5 @@
 import React from "react";
+import { text } from '@storybook/addon-knobs'
 import BgPaintingImage from "../../stories/assets/bg-painting.jpg";
 import BgWatercolorImage from "../../stories/assets/bg-watercolor.jpg";
 import Heading from '../Heading';
@@ -12,11 +13,13 @@ export default {
 const children =    (
   <>
    <Heading>
-    <h1>
-      A beleza da <strong>vida</strong>
-      <br/>
-      com água e cor
-    </h1>
+    <Heading>
+      <h1>
+        A beleza da <strong>vida</strong>
+        <br/>
+        com água e cor
+      </h1>
+    </Heading>
     </Heading>
     <ul>
       <li>
@@ -31,18 +34,22 @@ export const usage = () => <Hero image={BgWatercolorImage} children={children}/>
 
 export const withList = () => (
   <Hero image={BgPaintingImage}>
+    <Heading>
+      <h1>
+        {text('Title', 'Inspire um mundo colorido')}
+      </h1>
+    </Heading>
     <ul>
       <li>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua.
+        {text('Description 1', '1- Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.')}
       </li>
       <li>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua.
+        {text('Description 2', '2- Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod' +
+         'tempor incididunt ut labore et dolore magna aliqua.')}
       </li>
       <li>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua.
+        {text('Description 3', `3- Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua.`)}
       </li>
     </ul>
   </Hero>
