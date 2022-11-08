@@ -1,5 +1,5 @@
 import { createGlobalStyle } from "styled-components";
-import { BreakpointSize, breakAt } from "../Breakpoints/Breakpoints";
+import { BreakpointSize, breakAt } from "components/Breakpoints/Breakpoints";
 
 const colorPrimary = "#ffc107";
 
