@@ -1,5 +1,4 @@
 import { render } from "@testing-library/react";
-import BgPaintingImage from "../../stories/assets/bg-painting.jpg";
 import Hero from "./Hero";
 
 describe("Hero", () => {
@@ -13,11 +12,11 @@ describe("Hero", () => {
     expect(getByText(children)).toBeInTheDocument();
   });
 
-  it.skip("should contain a image", async () => {
-    const image = BgPaintingImage;
-    const { getByRole } = await mount({ image });
-
-    const logo = getByRole("img");
-    expect(logo).toHaveAttribute("src", "../../stories/assets/bg-painting.jpg");
+  it("should render image background", async () => {
+    const image = "http://stories/assets/bg-painting.jpg";
+    const { getByTestId } = await mount({ image });
+    expect(getByTestId("hero")).toHaveStyleRule({
+      backgroundImage: image,
+    });
   });
 });
