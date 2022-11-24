@@ -1,7 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 import { createGlobalStyle } from "styled-components";
-import { BreakpointsSize, breakAt } from "components/Breakpoints/Breakpoints";
+import { BreakpointsSize, breakAt } from "styles/Breakpoints/Breakpoints";
 
 const colorPrimary = "#ffc107";
 
