@@ -1,8 +1,8 @@
 import React from "react";
 import propTypes from "prop-types";
 import styled from "styled-components";
-import BUTTON_COLORS from "../../constants/ButtonColors";
-import BUTTON_VARIANTS from "../../constants/ButtonVariants";
+import BUTTON_COLORS from "constants/ButtonColors";
+import BUTTON_VARIANTS from "constants/ButtonVariants";
 
 const getMainColor = ({ theme, color }) => {
   return {

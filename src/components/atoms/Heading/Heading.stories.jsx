@@ -3,7 +3,7 @@ import { text } from '@storybook/addon-knobs'
 import Heading from "."
 
 export default {
-  title: "Components/Heading",
+  title: "Components/Atoms/Heading",
   component: Heading
 }
 

@@ -1,7 +1,7 @@
 import { fireEvent } from "@testing-library/react";
 import { render } from "test-utils";
-import BUTTON_COLORS from "../../constants/ButtonColors";
-import BUTTON_VARIANTS from "../../constants/ButtonVariants";
+import BUTTON_COLORS from "constants/ButtonColors";
+import BUTTON_VARIANTS from "constants/ButtonVariants";
 import Button from "./Button";
 
 describe("Button", () => {

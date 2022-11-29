@@ -2,14 +2,14 @@ import React from "react";
 import { text } from '@storybook/addon-knobs'
 import BUTTON_COLORS from 'constants/ButtonColors';
 import BUTTON_VARIANTS from 'constants/ButtonVariants';
-import BgPaintingImage from "../../stories/assets/bg-painting.jpg";
-import BgWatercolorImage from "../../stories/assets/bg-watercolor.jpg";
-import Button from 'components/Button';
-import Heading from '../Heading';
+import BgPaintingImage from "stories/assets/bg-painting.jpg";
+import BgWatercolorImage from "stories/assets/bg-watercolor.jpg";
+import Button from 'components/atoms/Button';
+import Heading from 'components/atoms/Heading';
 import Hero from '.'
 
 export default {
-  title: "Components/Hero",
+  title: "Components/Molecules/Hero",
   component: Hero,
 };
 

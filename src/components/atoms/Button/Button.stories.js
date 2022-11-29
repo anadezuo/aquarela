@@ -1,12 +1,12 @@
 import React from "react";
 import styled from "styled-components";
 import { actions } from "@storybook/addon-actions";
-import BUTTON_COLORS from "../../constants/ButtonColors";
+import BUTTON_COLORS from "constants/ButtonColors";
 import Button from "./Button";
 import BUTTON_VARIANTS from "constants/ButtonVariants";
 
 export default {
-  title: "Components/Button",
+  title: "Components/Atoms/Button",
   component: Button,
 };
 
