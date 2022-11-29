@@ -1,7 +1,10 @@
 import React from "react";
 import { text } from '@storybook/addon-knobs'
+import BUTTON_COLORS from 'constants/ButtonColors';
+import BUTTON_VARIANTS from 'constants/ButtonVariants';
 import BgPaintingImage from "../../stories/assets/bg-painting.jpg";
 import BgWatercolorImage from "../../stories/assets/bg-watercolor.jpg";
+import Button from 'components/Button';
 import Heading from '../Heading';
 import Hero from '.'
 
@@ -52,5 +55,6 @@ export const withList = () => (
         tempor incididunt ut labore et dolore magna aliqua.`)}
       </li>
     </ul>
+    <Button color={BUTTON_COLORS.PRIMARY} variant={BUTTON_VARIANTS.OUTLINED}> Matricule-se agora</Button>
   </Hero>
 );
