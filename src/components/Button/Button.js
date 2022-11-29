@@ -20,6 +20,14 @@ const getDarkColor = ({ theme, color }) => {
   }[color];
 };
 
+const getTextColor = ({ theme, color }) => {
+  return {
+    [BUTTON_COLORS.DEFAULT]: "#212121",
+    [BUTTON_COLORS.PRIMARY]: theme.colors.primary.text,
+    [BUTTON_COLORS.DANGER]: theme.colors.danger.text,
+  }[color];
+};
+
 const getOutlinedText = (props) => {
   if (props.color === BUTTON_COLORS.DEFAULT) {
     return "#212121";
@@ -43,7 +51,7 @@ const ButtonBase = styled.button`
   padding: 12px 36px;
   background-color: ${getMainColor};
   border: 2px solid ${getMainColor};
-  color: ${({ theme }) => theme.colors.primary.text};
+  color: ${getTextColor};
 
   &:disabled {
     opacity: 0.6;

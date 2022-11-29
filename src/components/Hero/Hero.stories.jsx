@@ -15,15 +15,11 @@ export default {
 
 const children =    (
   <>
-   <Heading>
-    <Heading>
-      <h1>
-        A beleza da <strong>vida</strong>
-        <br/>
-        com água e cor
-      </h1>
-    </Heading>
-    </Heading>
+    <h1>
+      A beleza da <strong>vida</strong>
+      <br/>
+      com água e cor
+    </h1>
     <ul>
       <li>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod

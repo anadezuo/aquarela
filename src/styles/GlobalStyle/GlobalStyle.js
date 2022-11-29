@@ -3,14 +3,12 @@ import { Helmet } from "react-helmet";
 import { createGlobalStyle } from "styled-components";
 import { BreakpointsSize, breakAt } from "styles/Breakpoints/Breakpoints";
 
-const colorPrimary = "#ffc107";
-
 const GlobalStyle = createGlobalStyle`
   html {
     font-family: "Poppins", sans-serif;
     font-weight: 300;
     font-size: 100%;
-    color: #212121;
+    color: ${({ theme }) => theme.colors.primary.text};;
     box-sizing: border-bix;
   }
 
@@ -24,12 +22,12 @@ const GlobalStyle = createGlobalStyle`
 
   h1, h2, h3, h4, h5, h6 {
     line-height: 1.3;
-    font-weight: 700;
+    font-weight: 300;
     letter-spacing: 2px;
 
 
    strong {
-     color: ${colorPrimary};
+     color: ${({ theme }) => theme.colors.primary.main};
      font-weight: 700;
     }
   }
@@ -81,7 +79,7 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
-const GlobalStyleComposed = () => {
+const GlobalStyleComposed = () => (
   <>
     <GlobalStyle />
     <Helmet>
@@ -90,7 +88,7 @@ const GlobalStyleComposed = () => {
         rel="stylesheet"
       />
     </Helmet>
-  </>;
-};
+  </>
+);
 
 export default GlobalStyleComposed;

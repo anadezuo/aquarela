@@ -2,7 +2,6 @@ import React from "react";
 import styled, { css } from "styled-components";
 import PropTypes from "prop-types";
 import { breakAt, BreakpointsSize } from "styles/Breakpoints";
-const colorPrimary = "#ffc107";
 
 const Root = styled.div`
   color: #fff;
@@ -45,7 +44,7 @@ const Content = styled.div`
   li {
     &::before {
       content: "\\2713\\0020";
-      color: ${colorPrimary};
+      color: ${({ theme }) => theme.colors.primary.main};
     }
   }
 `;
