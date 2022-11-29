@@ -1,19 +1,24 @@
-import { render } from "@testing-library/react";
-import ThemeProvider from "styles/ThemeProvider";
+import { fireEvent } from "@testing-library/react";
+import { render } from "test-utils";
 import BUTTON_COLORS from "../../constants/ButtonColors";
+import BUTTON_VARIANTS from "../../constants/ButtonVariants";
 import Button from "./Button";
 
 describe("Button", () => {
-  function mount({ children, color, disabled }) {
+  function mount({ children, color, variant, disabled, onClick }) {
     return render(
-      <ThemeProvider>
-        <Button children={children} color={color} disabled={disabled} />
-      </ThemeProvider>
+      <Button
+        children={children}
+        color={color}
+        variant={variant}
+        disabled={disabled}
+        onClick={onClick}
+      />
     );
   }
 
-  function getButton(getByRole, textButton) {
-    return getByRole("button", { name: textButton });
+  function getButton(getByRole) {
+    return getByRole("button");
   }
 
   it("should render a text", () => {
@@ -23,39 +28,47 @@ describe("Button", () => {
   });
 
   it("should render disabled when value is given", () => {
-    const text = "My Button";
-    const { getByRole } = mount({ children: text, disabled: true });
-    const button = getButton(getByRole, text);
+    const { getByRole } = mount({ disabled: true });
+    const button = getButton(getByRole);
     expect(button).toHaveAttribute("disabled", "");
   });
 
-  it("should show default color when color is provided", () => {
-    const text = "My Button";
-    const { getByRole } = mount({
-      children: text,
-      color: BUTTON_COLORS.DEFAULT,
-    });
-    const button = getButton(getByRole, text);
-    expect(button).toHaveStyle("background-color: #e0e0e0;");
+  it("should execute listener callback on click", () => {
+    const onClick = jest.fn();
+    const { getByRole } = mount({ onClick });
+    fireEvent.click(getByRole("button"));
+    expect(onClick).toBeCalled();
   });
 
-  it("should show primary color when color is provided", () => {
-    const text = "My Button";
-    const { getByRole } = mount({
-      children: text,
+  it.each(Object.values(BUTTON_COLORS).map((item) => [item]))(
+    "should show %s color when color is provided",
+    (color) => {
+      const { asFragment } = mount({ color });
+      expect(asFragment()).toMatchSnapshot();
+    }
+  );
+
+  it.each(Object.values(BUTTON_VARIANTS).map((item) => [item]))(
+    "should optionally render an %s button",
+    (variant) => {
+      const { asFragment } = mount({ variant });
+      expect(asFragment()).toMatchSnapshot();
+    }
+  );
+
+  it("should optionally render an outlined button with color primary", () => {
+    const { asFragment } = mount({
       color: BUTTON_COLORS.PRIMARY,
+      variant: BUTTON_VARIANTS.OUTLINED,
     });
-    const button = getButton(getByRole, text);
-    expect(button).toHaveStyle("background-color: #ffc107;");
+    expect(asFragment()).toMatchSnapshot();
   });
 
-  it("should show danger color when color is provided", () => {
-    const text = "My Button";
-    const { getByRole } = mount({
-      children: text,
-      color: BUTTON_COLORS.DANGER,
+  it("should optionally render an link button with color primary", () => {
+    const { asFragment } = mount({
+      color: BUTTON_COLORS.PRIMARY,
+      variant: BUTTON_VARIANTS.LINK,
     });
-    const button = getButton(getByRole, text);
-    expect(button).toHaveStyle("background-color: #ff3d00;");
+    expect(asFragment()).toMatchSnapshot();
   });
 });
