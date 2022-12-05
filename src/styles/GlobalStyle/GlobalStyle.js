@@ -9,15 +9,18 @@ const GlobalStyle = createGlobalStyle`
     font-weight: 300;
     font-size: 100%;
     color: ${({ theme }) => theme.colors.primary.text};
-    box-sizing: border-bix;
+    box-sizing: border-box;
+    
   }
 
   *, *::before, * ::after {
     box-sizing: inherit;
   }
-
+  
   body   {
     margin: 0;
+    padding: 0;
+    background-color: ${({ theme }) => theme.colors.background.main};
   }
 
   h1, h2, h3, h4, h5, h6 {

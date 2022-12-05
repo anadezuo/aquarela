@@ -33,7 +33,7 @@ const IconRoot = styled.div`
     border: 1px solid ${getPrimaryColor};
 
     > * {
-      color: ${({ theme }) => theme.colors.primary.background};
+      color: ${({ theme }) => theme.colors.background.main};
       background-color: ${getPrimaryColor};
     }
   }

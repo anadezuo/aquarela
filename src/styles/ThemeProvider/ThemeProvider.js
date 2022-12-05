@@ -13,12 +13,17 @@ const light = {
       dark: "#c79100",
       light: "#fff350",
       text: "#212121",
-      background: "#fff",
+      contrastText: "#fff",
     },
     danger: {
       main: "#ff3d00",
       dark: "#b22a00",
       text: "#212121",
+    },
+    background: {
+      main: "#fff",
+      inverse: "#f7f7f7",
+      contrast: "#2a2a2a",
     },
   },
 };
@@ -34,7 +39,12 @@ const allThemes = {
         dark: "#1769aa",
         light: "#4dabf5",
         text: "#fff",
-        background: "#fff",
+        contrastText: "#f7f7f7",
+      },
+      background: {
+        main: "#2a2a2a",
+        inverse: "#333",
+        contrast: "#000",
       },
     },
   },
