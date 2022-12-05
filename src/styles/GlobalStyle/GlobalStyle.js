@@ -8,7 +8,7 @@ const GlobalStyle = createGlobalStyle`
     font-family: "Poppins", sans-serif;
     font-weight: 300;
     font-size: 100%;
-    color: ${({ theme }) => theme.colors.primary.text};;
+    color: ${({ theme }) => theme.colors.primary.text};
     box-sizing: border-bix;
   }
 

@@ -2,7 +2,9 @@ import React from "react";
 import { render } from "test-utils";
 import GlobalStyle from "./GlobalStyle";
 
-test("match snapshot", () => {
-  render(<GlobalStyle />);
-  expect(document.head).toMatchSnapshot();
+describe("match snapshot", () => {
+  it("should render global styles", () => {
+    render(<GlobalStyle />);
+    expect(document.head).toMatchSnapshot();
+  });
 });

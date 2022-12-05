@@ -13,6 +13,7 @@ const light = {
       dark: "#c79100",
       light: "#fff350",
       text: "#212121",
+      background: "#fff",
     },
     danger: {
       main: "#ff3d00",
@@ -33,6 +34,7 @@ const allThemes = {
         dark: "#1769aa",
         light: "#4dabf5",
         text: "#fff",
+        background: "#fff",
       },
     },
   },
