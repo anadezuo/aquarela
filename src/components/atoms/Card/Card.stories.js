@@ -5,7 +5,7 @@ import Button from "components/atoms/Button";
 import Heading from "components/atoms/Heading";
 import Section from "components/molecules/Section";
 import Card, { CardBody, CardMedia } from "./Card";
-import WaterColorKit from "assets/watercolor_kit.jpeg";
+import WaterColorKit from "assets/bg-watercolor-kit.jpeg";
 
 export default {
   title: "Components/Atoms/Card",

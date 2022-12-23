@@ -8,6 +8,8 @@ import Button from "components/atoms/Button";
 import Heading from "components/atoms/Heading";
 import Grid from "components/atoms/Grid";
 import Feature from "components/atoms/Feature";
+import Accordion from "components/atoms/Accordion";
+import AccordionGroup from "components/atoms/AccordionGroup";
 import Section from "components/molecules/Section";
 import Hero from "components/molecules/Hero";
 import Footer from "components/organisms/Footer";
@@ -119,6 +121,29 @@ const Home = () => (
       <Heading>
         <h2>Dúvidas frequentes</h2>
       </Heading>
+      <AccordionGroup>
+        <Accordion title="Quando as aula começam?">
+          <p>
+            What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the
+            printing and typesetting industry. Lorem Ipsum has been the
+            industry's
+          </p>
+        </Accordion>
+        <Accordion title="Não tenho todos os materiais, o que faço?">
+          <p>
+            What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the
+            printing and typesetting industry. Lorem Ipsum has been the
+            industry's
+          </p>
+        </Accordion>
+        <Accordion title="Como posso realizar o pagamento?">
+          <p>
+            What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the
+            printing and typesetting industry. Lorem Ipsum has been the
+            industry's
+          </p>
+        </Accordion>
+      </AccordionGroup>
     </Section>
     <Footer />
   </>

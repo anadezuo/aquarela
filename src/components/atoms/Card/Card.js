@@ -5,6 +5,7 @@ import PropTypes from "prop-types";
 const Root = styled.div`
   background-color: ${({ theme }) => theme.colors.background.main};
   border-radius: 4px;
+  overflow: hidden;
 `;
 
 const Body = styled.div`
