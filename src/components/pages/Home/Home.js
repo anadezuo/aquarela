@@ -113,7 +113,7 @@ const Home = () => (
           <Button color={BUTTON_COLORS.PRIMARY}>Saiba mais</Button>
         </div>
         <div>
-          <video src={WatercolorVideo} width="100%" autoPlay loop />
+          <video src={WatercolorVideo} width="100%" autoPlay loop muted />
         </div>
       </Grid>
     </Section>

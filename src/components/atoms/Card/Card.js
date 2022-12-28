@@ -6,10 +6,13 @@ const Root = styled.div`
   background-color: ${({ theme }) => theme.colors.background.main};
   border-radius: 4px;
   overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.125);
 `;
 
 const Body = styled.div`
   padding: 16px;
+  display: flex;
+  flex-direction: column;
 
   h6 {
     margin-top: 0;
