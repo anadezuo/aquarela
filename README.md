@@ -35,6 +35,8 @@ Durante o curso, foram abordados todos os temas envolvendo a vida útil de uma a
 
 Status do projeto: Em desenvolvimento :warning:
 
+![CircleCI](https://img.shields.io/circleci/build/github/anadezuo/aquarela/main?style=for-the-badge)
+
 <br />
 
 ## Funcionalidades
