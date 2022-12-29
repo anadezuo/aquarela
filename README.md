@@ -1,70 +1,106 @@
 # AquarelAna
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p align="center">
+  <img src="https://img.shields.io/badge/React-69D1D1?style=for-the-badge&logo=react&logoColor=white" alt="Biblioteca React">
+  <img src="https://img.shields.io/badge/JavaScript-ffc107?style=for-the-badge&logo=javascript&logoColor=white" alt="Linguagem Javascript" >
+  <img src="https://img.shields.io/badge/styled--components-FFDFCC?style=for-the-badge&logo=styled-components&logoColor=white" alt="Biblioteca styled components">
+  <img src="https://img.shields.io/badge/storybook-FF99CC?style=for-the-badge&logo=storybook&logoColor=white" alt="Biblioteca do Storybook">
+  <img src="https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white" alt="Plataforma Vercel">
+  <img src="https://img.shields.io/badge/Chromatic-E44C30?style=for-the-badge&logo=chromatic&logoColor=white" alt="Plataforma Chromatic">
+  <img src="https://img.shields.io/badge/Yarn-2C8EBB?style=for-the-badge&logo=yarn&logoColor=white" alt="Yarn">
+</p>
 
-## Available Scripts
 
-In the project directory, you can run:
+<h1 align="center">  
+  <img width="1036" alt="Tela da versão web do site mostrando um pincel e tintas mescladas" src="https://user-images.githubusercontent.com/43011663/209943534-27a304f4-7bc9-4091-be3a-c8d4b6a8ca6e.png">
+</h1>
 
-### `npm start`
+<p align="center">
+ <a href="#sobre"> 🖥️ Sobre</a> •
+ <a href="#funcionalidades"> ⚙️ Funcionalidades</a> •
+ <a href="#versão-mobile"> 📱 Versão Mobile</a> • 
+ <a href="#tecnologias"> 🛠️ Tecnologias</a> • 
+ <a href="#executar-o-projeto"> 🎡 Executar o projeto</a> • 
+ <a href="#deploy"> :rocket: Deploy </a> • 
+ <a href="#licença"> 📄 Licença</a>
+</p>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Sobre
 
-### `npm test`
+AquarelAna é um site que disponibiliza cursos, artigos e dicas sobre diversas técnicas em aquarela para iniciantes e profissionais.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+O projeto foi desenvolvido durante o **Curso [React Profissinal](https://www.udemy.com/course/react-redux-profissional/)** do professor [Bruno Nardini](https://github.com/megatroom). 
+Durante o curso, foram abordados todos os temas envolvendo a vida útil de uma aplicação, desde sua concepção através de um Design System, até sua Entrega e Integração Contínua.
 
-### `npm run build`
+Status do projeto: Em desenvolvimento :warning:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<br />
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Funcionalidades
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- [x] Listagem do contéudo das aulas
+- [x] FAQ
 
-### `npm run eject`
+<br />
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Versão Mobile
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+A versão mobile possui layout personalizado e responsabilidade nas fontes para melhor adaptação da leitura.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+<div style="background=yellow">
+  <p align="center">
+     <img alt="Tela mobile da página principal" src="https://user-images.githubusercontent.com/43011663/209946088-d7094a2b-46e9-4da4-a694-1f1b05182fd4.png" width="200px">
+     <img alt="Tela mobile exibindo os cartões com o conteúdo do curso" src="https://user-images.githubusercontent.com/43011663/209945783-b712787a-b6f7-491a-8869-e5f1f39532bb.png" width="200px">
+  </p>
+<div>
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+<br />
 
-## Learn More
+## Tecnologias
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Para o desenvolvimento do projeto, foram utilizadas a seguintes bibliotecas:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+-   **[React](https://reactjs.org/blog/2022/03/29/react-v18.html)**: v18.2.0
+-   **[Styled Components](https://styled-components.com/)**: v5.3.6
+-   **[Storybook from React](https://storybook.js.org/tutorials/intro-to-storybook/react/en/get-started/)**: v6.5.13
 
-### Code Splitting
+<br />
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Executar o projeto
 
-### Analyzing the Bundle Size
+Para executar o projeto em sua máquina, é necessário ter o [Git](https://git-scm.com), e uma ferramenta para edição de código, tal como o [VSCode](https://code.visualstudio.com/).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Após ferramentas instaladas, executar os comandos abaixo:
 
-### Making a Progressive Web App
+```bash
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+# Clone este repositório
+$ git clone https://github.com/anadezuo/aquarela.git
 
-### Advanced Configuration
+# Acesse a pasta do projeto no terminal/cmd
+$ cd aquarela
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+# Realizar a instalação das dependências
+$ yarn install
 
-### Deployment
+# Execute a aplicação em modo de desenvolvimento
+$ yarn start
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+# A página irá subir no url http://localhost:3000 
 
-### `npm run build` fails to minify
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<br />
+
+## Deploy
+
+Para publicação foi utilizada a plataforma como serviço da [Vercel](https://vercel.com/), para visitar o projeto acesse o link https://aquarela.vercel.app/.
+
+Também foi disponibilizado o Design System utilizado no projeto através da ferramenta Chromatich, para visitar acesse o [link](https://63a5e9d688f3f72839c32adf-ajkeklcurl.chromatic.com/?path=/story/introduction-welcome--page).
+
+<br />
+
+## Licença
+
+(construção)
