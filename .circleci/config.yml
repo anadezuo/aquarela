@@ -23,9 +23,9 @@ orbs:
 
 
 jobs:
-  setup:
+  install-node:
     docker:
-      - image: circleci/node:18.12.1-browsers
+      - image: 'cimg/base:stable'
     steps:
       - checkout
       - node/install:
@@ -34,7 +34,7 @@ jobs:
       - run: yarn --version
 
 workflows:
-  sample:
+  ci:
     jobs:
-      - setup
+      - install-node
 
