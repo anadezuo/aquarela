@@ -38,7 +38,7 @@ Status do projeto: Em desenvolvimento :warning:
 
 ![CircleCI](https://img.shields.io/circleci/build/github/anadezuo/aquarela/main?style=for-the-badge)
 
-![Codecov](https://img.shields.io/codecov/c/github/anadezuo/main?style=for-the-badge)
+![Codecov](https://img.shields.io/codecov/c/github/anadezuo/aquarela?style=for-the-badge)
 
 
 <br />
