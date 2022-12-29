@@ -36,9 +36,9 @@ Durante o curso, foram abordados todos os temas envolvendo a vida útil de uma a
 Status do projeto: Em desenvolvimento :warning:
 
 
-<img src="https://img.shields.io/circleci/build/github/anadezuo/aquarela/main?style=for-the-badge" alt="">
+![CircleCI](https://img.shields.io/circleci/build/github/anadezuo/aquarela/main?style=for-the-badge)
 
-<img src="https://img.shields.io/codecov/c/github/anadezuo/main?style=for-the-badge" alt="">
+![Codecov](https://img.shields.io/codecov/c/github/anadezuo/main?style=for-the-badge)
 
 
 <br />
