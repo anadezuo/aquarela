@@ -23,7 +23,7 @@ orbs:
 
 
 jobs:
-  install-node:
+  tests:
     docker:
       - image: 'cimg/base:stable'
     steps:
@@ -32,9 +32,13 @@ jobs:
           install-yarn: true
       - run: node --version
       - run: yarn --version
+      - node/install-packages:
+          pkg-manager: yarn
+      - run: yarn lint
+      - run: yarn cover
 
 workflows:
   ci:
     jobs:
-      - install-node
+      - tests
 
