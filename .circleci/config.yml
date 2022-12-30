@@ -44,6 +44,8 @@ jobs:
       - image: 'cimg/base:stable'
     steps:
       - checkout
+      - node/install:
+          install-yarn: true
       - run:
           name: Check package version
           command: node scripts/check-version anadezuo aquarela
