@@ -44,8 +44,9 @@ jobs:
       - image: 'cimg/base:stable'
     steps:
       - checkout
-      - run: Check package version
-          command:node scripts/check-version anadezuo aquarela
+      - run:
+          name: Check package version
+          command: node scripts/check-version anadezuo aquarela
 
 workflows:
   ci:
