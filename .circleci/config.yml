@@ -39,9 +39,23 @@ jobs:
       - run: yarn cover
       - codecov/upload:
           file: coverage/*.json
+  version:
+    docker:
+      - image: 'cimg/base:stable'
+    steps:
+      - checkout
+      - run: 
+          name: Check package version
+            command: node scripts/check-version anadezuo aquarela
 
 workflows:
   ci:
     jobs:
       - tests
+      - version:
+          filters:
+            branches:
+              ignore: master
+            tags:
+              ignore: /.*/
 
