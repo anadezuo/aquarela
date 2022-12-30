@@ -39,6 +39,9 @@ jobs:
       - run: yarn cover
       - codecov/upload:
           file: coverage/*.json
+      - run: 
+          name: Chromatic 
+          command: yarn chromatic --project-token=${CHROMATIC_TOKEN}
   version:
     docker:
       - image: 'cimg/base:stable'
