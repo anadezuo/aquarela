@@ -67,7 +67,7 @@ workflows:
       - version:
           filters:
             branches:
-              ignore: master
+              ignore: main
             tags:
               ignore: /.*/
 
