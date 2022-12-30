@@ -31,17 +31,43 @@ jobs:
       - checkout
       - node/install:
           install-yarn: true
-      - run: node --version
-      - run: yarn --version
+      - run:
+          name: Show node version
+          command: |
+            node --version
+            yarn --version
       - node/install-packages:
           pkg-manager: yarn
-      - run: yarn lint
-      - run: yarn cover
+      - run: 
+          name: Lint check
+          command: yarn lint
+      - run:
+          name: Run unit tests with coverage
+          command: yarn cover
       - codecov/upload:
           file: coverage/*.json
+      - run: 
+          name: Publish to Chromatic 
+          command: yarn chromatic --project-token=${CHROMATIC_TOKEN}
+  version:
+    docker:
+      - image: 'cimg/base:stable'
+    steps:
+      - checkout
+      - node/install:
+          install-yarn: true
+      - run:
+          name: Check package version
+          command: node scripts/check-version anadezuo aquarela
 
 workflows:
   ci:
     jobs:
       - tests
+      - version:
+          filters:
+            branches:
+              ignore: master
+            tags:
+              ignore: /.*/
 
