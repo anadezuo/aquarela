@@ -55,3 +55,13 @@ export const WithImage = () => (
     </Card>
   </Section>
 );
+
+export const OnlyMedia = () => (
+  <Section inverse>
+    <Card>
+      <CardMedia image={WaterColorKit}>
+        <h5> Descrição do imagem </h5>
+      </CardMedia>
+    </Card>
+  </Section>
+);

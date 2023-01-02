@@ -10,6 +10,15 @@ import Footer from "components/organisms/Footer";
 import BgAboutImage from "assets/bg-about.jpg";
 import SvgAbout from "draws/About";
 
+import Teacher1 from "draws/teachers/Teacher1";
+import Teacher2 from "draws/teachers/Teacher2";
+import Teacher3 from "draws/teachers/Teacher3";
+import Teacher4 from "draws/teachers/Teacher4";
+import Teacher5 from "draws/teachers/Teacher5";
+import Teacher6 from "draws/teachers/Teacher6";
+import Teacher7 from "draws/teachers/Teacher7";
+import Card, { CardMedia } from "components/atoms/Card";
+
 const ImageContainer = styled.div`
   svg {
     width: 100%;
@@ -18,6 +27,42 @@ const ImageContainer = styled.div`
     color: ${({ theme }) => theme.colors.primary.main};
   }
 `;
+
+function buildCardTeachers() {
+  const names = [
+    "Amy",
+    "Bernardo",
+    "Camila",
+    "Deborah",
+    "Eliane",
+    "Flávio",
+    "Gleen",
+  ];
+  const teachersAvatar = [
+    <Teacher1 />,
+    <Teacher2 />,
+    <Teacher3 />,
+    <Teacher4 />,
+    <Teacher5 />,
+    <Teacher6 />,
+    <Teacher7 />,
+  ];
+  return Array(7)
+    .fill({})
+    .map((_, index) => (
+      <Card key={index}>
+        <CardMedia
+          svg={<Teacher1 />}
+          children={
+            <>
+              {teachersAvatar[index]}
+              <h5>{names[index]}</h5>
+            </>
+          }
+        />
+      </Card>
+    ));
+}
 
 const About = () => {
   return (
@@ -101,7 +146,9 @@ const About = () => {
         <Heading>
           <h2>Conheça nossos professores</h2>
         </Heading>
-        <Grid md={2}></Grid>
+        <Grid sm={2} md={3} lg={4}>
+          {buildCardTeachers()}
+        </Grid>
       </Section>
       <Footer />
     </>

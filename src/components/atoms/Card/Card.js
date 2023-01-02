@@ -20,19 +20,58 @@ const Body = styled.div`
 `;
 
 const Media = styled.div`
+  display: flex;
   background-image: url(${({ image }) => image});
   background-position: center center;
   background-size: cover;
   height: 200px;
+
+  > h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 8px 16px;
+    margin: 0;
+    color: #fff;
+    align-self: flex-end;
+    flex: 1;
+  }
+
+  svg + h1,
+  svg + h2,
+  svg + h3,
+  svg + h4,
+  svg + h5,
+  svg + h6,
+  svg + p {
+    position: absolute;
+  }
+
+  > svg {
+    height: auto;
+    width: auto;
+    width: 100%;
+    color: ${({ theme }) => theme.colors.primary.main};
+  }
 `;
 
-export const CardMedia = ({ image }) => <Media image={image} />;
+export const CardMedia = ({ image, svg, children }) => (
+  <Media image={image} svg={svg} children={children} />
+);
 
 CardMedia.propTypes = {
+  image: PropTypes.string,
+  svg: PropTypes.node,
   children: PropTypes.node,
 };
 
 CardMedia.defaultProps = {
+  image: undefined,
+  svg: undefined,
   children: undefined,
 };
 
