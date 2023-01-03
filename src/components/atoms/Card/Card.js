@@ -6,7 +6,7 @@ const Root = styled.div`
   background-color: ${({ theme }) => theme.colors.background.main};
   border-radius: 4px;
   overflow: hidden;
-  border: 1px solid rgba(0, 0, 0, 0.125);
+  border: 1px solid ${({ theme }) => theme.colors.border};
 `;
 
 const Body = styled.div`

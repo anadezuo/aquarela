@@ -25,6 +25,7 @@ const light = {
       inverse: "#f7f7f7",
       contrast: "#2a2a2a",
     },
+    border: "rgba(0, 0, 0, 0.125)",
   },
 };
 
