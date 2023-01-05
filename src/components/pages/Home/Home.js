@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { CiUser, CiRainbow, CiTwitter, CiSun } from "react-icons/ci";
 import BUTTON_COLORS from "constants/ButtonColors";
 import BUTTON_VARIANTS from "constants/ButtonVariants";
@@ -110,7 +111,9 @@ const Home = () => (
             printing and typesetting industry. Lorem Ipsum has been the
             industry's standard dummy text ever since the 1500s.
           </p>
-          <Button color={BUTTON_COLORS.PRIMARY}>Saiba mais</Button>
+          <Button as={Link} to="/sobre" color={BUTTON_COLORS.PRIMARY}>
+            Saiba mais
+          </Button>
         </div>
         <div>
           <video src={WatercolorVideo} width="100%" autoPlay loop muted />

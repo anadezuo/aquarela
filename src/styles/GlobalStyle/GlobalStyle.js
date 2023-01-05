@@ -17,10 +17,16 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: inherit;
   }
   
-  body   {
+  body {
     margin: 0;
     padding: 0;
     background-color: ${({ theme }) => theme.colors.background.main};
+  }
+
+  a, button {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-size: 100%;
   }
 
   h1, h2, h3, h4, h5, h6 {

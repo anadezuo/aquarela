@@ -1,6 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
+
+import { useScrollToTop } from "hooks/scroll";
+
 import Grid from "components/atoms/Grid";
 import Heading from "components/atoms/Heading";
 import Hero from "components/molecules/Hero";
@@ -9,7 +12,6 @@ import Footer from "components/organisms/Footer";
 
 import BgAboutImage from "assets/bg-about.jpg";
 import SvgAbout from "draws/About";
-
 import Teacher1 from "draws/teachers/Teacher1";
 import Teacher2 from "draws/teachers/Teacher2";
 import Teacher3 from "draws/teachers/Teacher3";
@@ -18,6 +20,7 @@ import Teacher5 from "draws/teachers/Teacher5";
 import Teacher6 from "draws/teachers/Teacher6";
 import Teacher7 from "draws/teachers/Teacher7";
 import Card, { CardMedia } from "components/atoms/Card";
+import BreadCrumb from "components/atoms/BreadCrumb";
 
 const ImageContainer = styled.div`
   svg {
@@ -65,12 +68,17 @@ function buildCardTeachers() {
 }
 
 const About = () => {
+  const items = [{ label: "Início", link: "/" }, { label: "Sobre" }];
+
+  useScrollToTop();
+
   return (
     <>
       <Hero image={BgAboutImage}>
         <Heading>
           <h1>Aquarela</h1>
         </Heading>
+        <BreadCrumb items={items} />
       </Hero>
       <Section>
         <Grid md={2}>

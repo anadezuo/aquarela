@@ -1,7 +1,10 @@
 import React from "react";
-import { FaIdCard, FaScroll, FaHome } from "react-icons/fa";
 import PropTypes from "prop-types";
 import styled from "styled-components";
+import { FaIdCard, FaScroll, FaHome } from "react-icons/fa";
+
+import { useScrollToTop } from "hooks/scroll";
+
 import Callout from "components/atoms/Callout";
 import Heading from "components/atoms/Heading";
 import Hero from "components/molecules/Hero";
@@ -10,6 +13,7 @@ import BgAboutImage from "assets/bg-about.jpg";
 import Section from "components/molecules/Section";
 import Art from "draws/Art";
 import Footer from "components/organisms/Footer";
+import BreadCrumb from "components/atoms/BreadCrumb";
 
 const PinnedList = styled.ul`
   list-style: none;
@@ -29,13 +33,22 @@ const PinnedItem = styled.li`
   }
 `;
 
-const ProductDetail = () => {
+const items = [
+  { label: "Início", link: "/" },
+  { label: "Serviço" },
+  { label: "Nome do serviço" },
+];
+
+const ProductDetails = () => {
+  useScrollToTop();
+
   return (
     <>
       <Hero image={BgAboutImage}>
         <Heading>
           <h1> Nome do serviço</h1>
         </Heading>
+        <BreadCrumb items={items} />
       </Hero>
       <Section>
         <p>
@@ -61,7 +74,7 @@ const ProductDetail = () => {
             CPF
           </PinnedItem>
           <PinnedItem>
-            <FaIdCard />
+            <FaScroll />
             Certidão de nascimento
           </PinnedItem>
           <PinnedItem>
@@ -72,9 +85,10 @@ const ProductDetail = () => {
       </Section>
       <Section inverse>
         <Callout
-          title={"Título"}
+          title={"Quer ganhar um desconto nesse curso?"}
           description={`What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.`}
           svg={<Art />}
+          buttonDescription="Saiba mais"
         />
       </Section>
       <Footer />
@@ -82,8 +96,8 @@ const ProductDetail = () => {
   );
 };
 
-ProductDetail.propTypes = {};
+ProductDetails.propTypes = {};
 
-ProductDetail.defaultProps = {};
+ProductDetails.defaultProps = {};
 
-export default ProductDetail;
+export default ProductDetails;

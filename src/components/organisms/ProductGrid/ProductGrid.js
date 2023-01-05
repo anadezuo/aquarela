@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import BUTTON_COLORS from "constants/ButtonColors";
 import BUTTON_VARIANTS from "constants/ButtonVariants";
@@ -38,6 +39,8 @@ const ProductGrid = ({ products }) => {
                 <Button
                   color={BUTTON_COLORS.PRIMARY}
                   variant={BUTTON_VARIANTS.LINK}
+                  as={Link}
+                  to="/servicos"
                 >
                   Saiba mais
                 </Button>
