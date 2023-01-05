@@ -10,9 +10,8 @@ const Container = styled.div`
     padding: 16px;
   }
 
-  ${breakAt(BreakpointsSize.xl)} {
+  ${breakAt(BreakpointsSize.lg)} {
     max-width: 1140px;
-    padding: 0;
     margin: 0 auto;
   }
 `;

@@ -46,7 +46,7 @@ const Image = styled.div`
   }
 `;
 
-const Callout = ({ title, description, svg }) => {
+const Callout = ({ title, description, buttonDescription, svg }) => {
   return (
     <Root>
       <Content>
@@ -59,7 +59,7 @@ const Callout = ({ title, description, svg }) => {
             color={BUTTON_COLORS.PRIMARY}
             variant={BUTTON_VARIANTS.DEFAULT}
           >
-            Texto Botão
+            {buttonDescription}
           </Button>
         </Actions>
       </Content>
@@ -69,11 +69,17 @@ const Callout = ({ title, description, svg }) => {
 };
 
 Callout.propTypes = {
-  children: PropTypes.node,
+  title: PropTypes.string,
+  description: PropTypes.string,
+  buttonDescription: PropTypes.string,
+  svg: PropTypes.node,
 };
 
 Callout.defaultProps = {
-  children: undefined,
+  title: "Título",
+  description: "Descrição da chamada de ação.",
+  buttonDescription: "Ação",
+  svg: undefined,
 };
 
 export default Callout;

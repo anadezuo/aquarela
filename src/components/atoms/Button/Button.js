@@ -48,17 +48,19 @@ const ButtonBase = styled.button`
   font-size: 1 rem;
   font-weight: 600;
   text-transform: uppercase;
-  padding: 12px 36px;
+  padding: 8px 30px;
   background-color: ${getMainColor};
   border: 2px solid ${getMainColor};
   color: ${getTextColor};
+  display: inline-block;
+  text-decoration: none;
 
   &:disabled {
     opacity: 0.6;
     cursor: not-allowed;
   }
 
-  &:hover:enabled {
+  &:hover:not(:disabled) {
     background-color: ${getDarkColor};
     border: 2px solid ${getDarkColor};
   }
@@ -68,7 +70,7 @@ const ButtonOutlined = styled(ButtonBase)`
   background-color: transparent;
   color: ${getOutlinedText};
 
-  &:hover:enabled {
+  &:hover:not(:disabled) {
     background-color: transparent;
     color: ${getDarkColor};
   }
@@ -80,6 +82,11 @@ const ButtonLink = styled(ButtonBase)`
   color: ${getLinkText};
   padding-left: 0;
   padding-right: 0;
+  &:hover:not(:disabled) {
+    background-color: transparent;
+    border-color: transparent;
+    color: ${getDarkColor};
+  }
 `;
 
 const Button = (props) => {
