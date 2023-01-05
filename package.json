@@ -11,12 +11,14 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^14.4.3",
     "chromatic": "5.0.0",
+    "history": "^5.3.0",
     "jest-styled-components": "^7.1.1",
     "prettier": "^2.8.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-helmet": "^6.1.0",
     "react-icons": "^4.7.1",
+    "react-router-dom": "^6.6.1",
     "react-scripts": "5.0.1",
     "styled-components": "^5.3.6",
     "web-vitals": "^3.1.0"
@@ -31,7 +33,7 @@
     "build-storybook": "build-storybook -s public",
     "chromatic": "chromatic --exit-zero-on-changes",
     "lint": "eslint src/**/*.js",
-    "svg":"svgr --icon --replace-attr-values \"#ffc107=currentColor\" -d src/draws/"
+    "svg": "svgr --icon --replace-attr-values \"#ffc107=currentColor\" -d src/draws/"
   },
   "eslintConfig": {
     "extends": [
