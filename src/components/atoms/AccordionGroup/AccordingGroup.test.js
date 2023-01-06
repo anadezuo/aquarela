@@ -47,14 +47,14 @@ describe("According Group", () => {
       children: buildAccordionGroup(3, title, childrenText),
     });
 
-    userEvent.click(getByText(title + 1));
+    await userEvent.click(getByText(title + 1));
     await waitFor(() => {
       expect(queryByText(childrenText + 0)).not.toBeInTheDocument();
       expect(getByText(childrenText + 1)).toBeInTheDocument();
       expect(queryByText(childrenText + 2)).not.toBeInTheDocument();
     });
 
-    userEvent.click(getByText(title + 2));
+    await userEvent.click(getByText(title + 2));
     await waitFor(() => {
       expect(queryByText(childrenText + 0)).not.toBeInTheDocument();
       expect(queryByText(childrenText + 1)).not.toBeInTheDocument();
@@ -68,8 +68,8 @@ describe("According Group", () => {
     const { getByText, queryByText } = mount({
       children: buildAccordionGroup(3, title, childrenText),
     });
-    userEvent.click(getByText(title + 1));
-    userEvent.click(getByText(title + 1));
+    await userEvent.click(getByText(`${title}1`));
+    await userEvent.click(getByText(`${title}1`));
     await waitFor(() => {
       expect(queryByText(childrenText + 1)).not.toBeInTheDocument();
     });

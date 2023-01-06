@@ -16,127 +16,53 @@ const Toolbar = styled.div`
   }
 `;
 
+const ButtonDefault = ({ ...rest }) => (
+  <Button {...events} {...rest}>
+    Default
+  </Button>
+);
+
+const ButtonPrimary = ({ ...rest }) => (
+  <Button color={BUTTON_COLORS.PRIMARY} {...events} {...rest}>
+    Primary
+  </Button>
+);
+
+const ButtonDanger = ({ ...rest }) => (
+  <Button color={BUTTON_COLORS.DANGER} {...events} {...rest}>
+    Primary
+  </Button>
+);
+
+const ButtonsWrapper = ({ ...rest }) => (
+  <div>
+    <p>Enabled:</p>
+    <Toolbar>
+      <ButtonDefault {...events} {...rest} />
+      <ButtonPrimary {...events} {...rest} />
+      <ButtonDanger {...events} {...rest} />
+    </Toolbar>
+    <p>As a link:</p>
+    <Toolbar>
+      <ButtonDefault as="a" href="#" {...events} {...rest} />
+      <ButtonPrimary as="a" href="#" {...events} {...rest} />
+      <ButtonDanger as="a" href="#" {...events} {...rest} />
+    </Toolbar>
+    <p>Disabled:</p>
+    <Toolbar>
+      <ButtonDefault disabled {...events} {...rest} />
+      <ButtonPrimary disabled {...events} {...rest} />
+      <ButtonDanger disabled {...events} {...rest} />
+    </Toolbar>
+  </div>
+);
+
 const events = actions({ onClick: "clicked" });
 
-export const usage = () => (
-  <div>
-    <p>Enabled:</p>
-    <Toolbar>
-      <Button {...events}>Default</Button>
-      <Button color={BUTTON_COLORS.PRIMARY} {...events}>
-        Primary
-      </Button>
-      <Button color={BUTTON_COLORS.DANGER} {...events}>
-        Danger
-      </Button>
-    </Toolbar>
-    <p>Disabled:</p>
-    <Toolbar>
-      <Button disabled {...events}>
-        Default
-      </Button>
-      <Button color={BUTTON_COLORS.PRIMARY} disabled {...events}>
-        Primary
-      </Button>
-      <Button color={BUTTON_COLORS.DANGER} disabled {...events}>
-        Danger
-      </Button>
-    </Toolbar>
-  </div>
-);
+export const usage = () => <ButtonsWrapper />;
 
 export const Outlined = () => (
-  <div>
-    <p>Enabled:</p>
-    <Toolbar>
-      <Button variant={BUTTON_VARIANTS.OUTLINED} {...events}>
-        Default
-      </Button>
-
-      <Button
-        color={BUTTON_COLORS.PRIMARY}
-        variant={BUTTON_VARIANTS.OUTLINED}
-        {...events}
-      >
-        Primary
-      </Button>
-      <Button
-        color={BUTTON_COLORS.DANGER}
-        variant={BUTTON_VARIANTS.OUTLINED}
-        {...events}
-      >
-        Danger
-      </Button>
-    </Toolbar>
-    <p>Disabled:</p>
-    <Toolbar>
-      <Button variant={BUTTON_VARIANTS.OUTLINED} disabled {...events}>
-        Default
-      </Button>
-      <Button
-        color={BUTTON_COLORS.PRIMARY}
-        variant={BUTTON_VARIANTS.OUTLINED}
-        disabled
-        {...events}
-      >
-        Primary
-      </Button>
-      <Button
-        color={BUTTON_COLORS.DANGER}
-        variant={BUTTON_VARIANTS.OUTLINED}
-        disabled
-        {...events}
-      >
-        Danger
-      </Button>
-    </Toolbar>
-  </div>
+  <ButtonsWrapper variant={BUTTON_VARIANTS.OUTLINED} />
 );
 
-export const Link = () => (
-  <div>
-    <p>Enabled:</p>
-    <Toolbar>
-      <Button variant={BUTTON_VARIANTS.LINK} {...events}>
-        Default
-      </Button>
-
-      <Button
-        color={BUTTON_COLORS.PRIMARY}
-        variant={BUTTON_VARIANTS.LINK}
-        {...events}
-      >
-        Primary
-      </Button>
-      <Button
-        color={BUTTON_COLORS.DANGER}
-        variant={BUTTON_VARIANTS.LINK}
-        {...events}
-      >
-        Danger
-      </Button>
-    </Toolbar>
-    <p>Disabled:</p>
-    <Toolbar>
-      <Button variant={BUTTON_VARIANTS.LINK} disabled {...events}>
-        Default
-      </Button>
-      <Button
-        color={BUTTON_COLORS.PRIMARY}
-        variant={BUTTON_VARIANTS.LINK}
-        disabled
-        {...events}
-      >
-        Primary
-      </Button>
-      <Button
-        color={BUTTON_COLORS.DANGER}
-        variant={BUTTON_VARIANTS.LINK}
-        disabled
-        {...events}
-      >
-        Danger
-      </Button>
-    </Toolbar>
-  </div>
-);
+export const Link = () => <ButtonsWrapper variant={BUTTON_VARIANTS.LINK} />;
