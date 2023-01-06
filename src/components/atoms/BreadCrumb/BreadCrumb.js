@@ -14,8 +14,8 @@ const Item = styled.div`
   text-decoration: none;
   color: ${({ theme }) => theme.colors.primary.contrastText};
 
-  ${({ haveLink }) =>
-    haveLink &&
+  ${(props) =>
+    props.to &&
     css`
       cursor: pointer;
       &:hover {
@@ -36,12 +36,7 @@ const BreadCrumb = ({ items }) => {
   return (
     <Root>
       {items.map((item) => (
-        <Item
-          key={item.label}
-          as={item.link && Link}
-          to={item.link}
-          haveLink={!!item.link}
-        >
+        <Item key={item.label} as={item.link && Link} to={item.link}>
           {item.label}
         </Item>
       ))}
