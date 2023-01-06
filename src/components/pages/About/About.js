@@ -1,8 +1,5 @@
 import React from "react";
-import PropTypes from "prop-types";
 import styled from "styled-components";
-
-import { useScrollToTop } from "hooks/scroll";
 
 import Grid from "components/atoms/Grid";
 import Heading from "components/atoms/Heading";
@@ -69,8 +66,6 @@ function buildCardTeachers() {
 
 const About = () => {
   const items = [{ label: "Início", link: "/" }, { label: "Sobre" }];
-
-  useScrollToTop();
 
   return (
     <>
@@ -162,9 +157,5 @@ const About = () => {
     </>
   );
 };
-
-About.propTypes = {};
-
-About.defaultProps = {};
 
 export default About;
