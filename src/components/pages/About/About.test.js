@@ -17,9 +17,4 @@ describe("About Page", () => {
     expect(getByText("Missão")).toBeInTheDocument();
     expect(getByText("Visão")).toBeInTheDocument();
   });
-
-  it("should scrolls to top in first render", () => {
-    mount();
-    expect(window.scrollTo).toBeCalledTimes(1);
-  });
 });

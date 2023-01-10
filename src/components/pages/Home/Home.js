@@ -142,11 +142,11 @@ const Home = ({ products }) => {
 };
 
 Home.propTypes = {
-  products: [],
+  products: PropTypes.arrayOf(ProductType),
 };
 
 Home.defaultProp = {
-  products: PropTypes.arrayOf(ProductType),
+  products: [],
 };
 
 export default Home;
