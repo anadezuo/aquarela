@@ -1,4 +1,5 @@
 import React from "react";
+import { buildProducts } from "builders/products";
 import Home from "./Home";
 
 export default {
@@ -6,4 +7,4 @@ export default {
   component: Home,
 };
 
-export const usage = () => <Home />;
+export const usage = () => <Home products={buildProducts(8)} />;

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
-import ProductType from "types/ProductType";
+import ProductType from "models/types/ProductType";
 import BUTTON_COLORS from "constants/ButtonColors";
 import BUTTON_VARIANTS from "constants/ButtonVariants";
 import Grid from "components/atoms/Grid";

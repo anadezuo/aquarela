@@ -1,6 +1,6 @@
 import React from "react";
 import { render, userEvent, waitFor } from "test-utils";
-import BgWaterColorKit from "assets/bg-watercolor-kit.jpeg";
+import { buildProducts } from "builders/products";
 import ProductGrid from "./ProductGrid";
 
 const ALL_PRODUCTS = "Lista completa de serviços";
@@ -11,16 +11,6 @@ describe("Product Grid", () => {
     return render(<ProductGrid products={products} />);
   }
 
-  function buildProducts(length) {
-    return new Array(length).fill({}).map((_, index) => ({
-      id: index,
-      image: BgWaterColorKit,
-      title: `Título ${index + 1}`,
-      summary:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-    }));
-  }
-
   it("should show three products by default and hide show more button", () => {
     const { getAllByRole, queryByText } = mount({ products: buildProducts(3) });
 
@@ -29,10 +19,11 @@ describe("Product Grid", () => {
   });
 
   it("should show more products on click show more button", async () => {
-    const { getByText } = mount({ products: buildProducts(4) });
+    const products = buildProducts(4);
+    const { getByText } = mount({ products });
     userEvent.click(getByText(ALL_PRODUCTS));
     await waitFor(() => {
-      expect(getByText("Título 4")).toBeInTheDocument();
+      expect(getByText(products[3].title)).toBeInTheDocument();
       expect(getByText(HIDE_PRODUCTS)).toBeInTheDocument();
     });
   });

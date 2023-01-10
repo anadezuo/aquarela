@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import { CiUser, CiRainbow, CiTwitter, CiSun } from "react-icons/ci";
 import BUTTON_COLORS from "constants/ButtonColors";
 import BUTTON_VARIANTS from "constants/ButtonVariants";
-import ProductType from "types/ProductType";
+import ProductType from "models/types/ProductType";
 
 import Button from "components/atoms/Button";
 import Heading from "components/atoms/Heading";

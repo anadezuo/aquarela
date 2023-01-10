@@ -10,7 +10,7 @@ import Section from "components/molecules/Section";
 import Art from "draws/Art";
 import Footer from "components/organisms/Footer";
 import BreadCrumb from "components/atoms/BreadCrumb";
-import ProductType from "types/ProductType";
+import ProductType from "models/types/ProductType";
 
 const PinnedList = styled.ul`
   list-style: none;
