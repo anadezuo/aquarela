@@ -1,19 +1,16 @@
 import React from "react";
-import PropTypes from "prop-types";
 import styled from "styled-components";
 import { FaIdCard, FaScroll, FaHome } from "react-icons/fa";
-
-import { useScrollToTop } from "hooks/scroll";
 
 import Callout from "components/atoms/Callout";
 import Heading from "components/atoms/Heading";
 import Hero from "components/molecules/Hero";
 
-import BgAboutImage from "assets/bg-about.jpg";
 import Section from "components/molecules/Section";
-import Art from "draws/Art";
+import SvgArt from "draws/Art";
 import Footer from "components/organisms/Footer";
 import BreadCrumb from "components/atoms/BreadCrumb";
+import ProductType from "models/types/ProductType";
 
 const PinnedList = styled.ul`
   list-style: none;
@@ -33,20 +30,18 @@ const PinnedItem = styled.li`
   }
 `;
 
-const items = [
-  { label: "Início", link: "/" },
-  { label: "Serviço" },
-  { label: "Nome do serviço" },
-];
-
-const ProductDetails = () => {
-  useScrollToTop();
+const ProductDetails = ({ product }) => {
+  const items = [
+    { label: "Início", link: "/" },
+    { label: "Serviço" },
+    { label: product.title },
+  ];
 
   return (
     <>
-      <Hero image={BgAboutImage}>
+      <Hero image={product.image}>
         <Heading>
-          <h1> Nome do serviço</h1>
+          <h1>{product.title}</h1>
         </Heading>
         <BreadCrumb items={items} />
       </Hero>
@@ -87,7 +82,7 @@ const ProductDetails = () => {
         <Callout
           title={"Quer ganhar um desconto nesse curso?"}
           description={`What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.`}
-          svg={<Art />}
+          svg={<SvgArt />}
           buttonDescription="Saiba mais"
         />
       </Section>
@@ -96,8 +91,12 @@ const ProductDetails = () => {
   );
 };
 
-ProductDetails.propTypes = {};
+ProductDetails.propTypes = {
+  product: ProductType,
+};
 
-ProductDetails.defaultProps = {};
+ProductDetails.defaultProps = {
+  product: {},
+};
 
 export default ProductDetails;

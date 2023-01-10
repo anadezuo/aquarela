@@ -1,3 +1,4 @@
+import { buildProduct } from "builders/products";
 import React from "react";
 import ProductDetails from "./ProductDetails";
 
@@ -6,4 +7,4 @@ export default {
   component: ProductDetails,
 };
 
-export const usage = () => <ProductDetails></ProductDetails>;
+export const usage = () => <ProductDetails product={buildProduct()} />;

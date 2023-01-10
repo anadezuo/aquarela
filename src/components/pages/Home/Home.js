@@ -1,9 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 import { CiUser, CiRainbow, CiTwitter, CiSun } from "react-icons/ci";
-import { useScrollToTop } from "hooks/scroll";
 import BUTTON_COLORS from "constants/ButtonColors";
 import BUTTON_VARIANTS from "constants/ButtonVariants";
+import ProductType from "models/types/ProductType";
 
 import Button from "components/atoms/Button";
 import Heading from "components/atoms/Heading";
@@ -18,35 +19,8 @@ import ProductGrid from "components/organisms/ProductGrid";
 
 import WatercolorVideo from "assets/watercolor.mp4";
 import BgBrushImage from "assets/bg-brush.jpg";
-import Birds from "assets/products/birds.jpg";
-import Flowers from "assets/products/flowers.jpg";
-import Fruit from "assets/products/fruit.jpg";
-import Material from "assets/products/material.jpg";
-import Ocean from "assets/products/ocean.jpg";
-import People from "assets/products/people.jpg";
-import Pencel from "assets/products/pencel.jpg";
 
-function buildProducts() {
-  const products = [
-    { title: "Pintura de alimentos", image: Fruit },
-    { title: "Técnica Seca", image: Birds },
-    { title: "Técnica molhado sobre molhado", image: Flowers },
-    { title: "Cuidado com os materiais", image: Material },
-    { title: "Tom sobre tom", image: Ocean },
-    { title: "Traços delicados", image: People },
-    { title: "Dicas sobre pinceis", image: Pencel },
-  ];
-
-  return new Array(7).fill({}).map((_, index) => ({
-    id: index,
-    ...products[index],
-    summary:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-  }));
-}
-
-const Home = () => {
-  useScrollToTop();
+const Home = ({ products }) => {
   return (
     <>
       <Hero image={BgBrushImage}>
@@ -105,7 +79,7 @@ const Home = () => {
         <Heading>
           <h2>Conteúdo das aulas</h2>
         </Heading>
-        <ProductGrid products={buildProducts()} />
+        <ProductGrid products={products} />
       </Section>
       <Section>
         <Grid md={2}>
@@ -165,6 +139,14 @@ const Home = () => {
       <Footer />
     </>
   );
+};
+
+Home.propTypes = {
+  products: PropTypes.arrayOf(ProductType),
+};
+
+Home.defaultProp = {
+  products: [],
 };
 
 export default Home;
