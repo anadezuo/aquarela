@@ -45,7 +45,8 @@ Status do projeto: Em desenvolvimento :warning:
 
 ## Funcionalidades
 
-- [x] Listagem do contéudo das aulas
+- [x] Página com detalhamento dos produtos
+- [x] Suporte para páginas não encontradas
 - [x] FAQ
 
 <br />
