@@ -7,7 +7,7 @@ import Heading from "components/atoms/Heading";
 import Hero from "components/molecules/Hero";
 
 import Section from "components/molecules/Section";
-import Art from "draws/Art";
+import SvgArt from "draws/Art";
 import Footer from "components/organisms/Footer";
 import BreadCrumb from "components/atoms/BreadCrumb";
 import ProductType from "models/types/ProductType";
@@ -82,7 +82,7 @@ const ProductDetails = ({ product }) => {
         <Callout
           title={"Quer ganhar um desconto nesse curso?"}
           description={`What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.`}
-          svg={<Art />}
+          svg={<SvgArt />}
           buttonDescription="Saiba mais"
         />
       </Section>

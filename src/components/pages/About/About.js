@@ -9,13 +9,13 @@ import Footer from "components/organisms/Footer";
 
 import BgAboutImage from "assets/bg-about.jpg";
 import SvgAbout from "draws/About";
-import Teacher1 from "draws/teachers/Teacher1";
-import Teacher2 from "draws/teachers/Teacher2";
-import Teacher3 from "draws/teachers/Teacher3";
-import Teacher4 from "draws/teachers/Teacher4";
-import Teacher5 from "draws/teachers/Teacher5";
-import Teacher6 from "draws/teachers/Teacher6";
-import Teacher7 from "draws/teachers/Teacher7";
+import SvgTeacher1 from "draws/teachers/Teacher1";
+import SvgTeacher2 from "draws/teachers/Teacher2";
+import SvgTeacher3 from "draws/teachers/Teacher3";
+import SvgTeacher4 from "draws/teachers/Teacher4";
+import SvgTeacher5 from "draws/teachers/Teacher5";
+import SvgTeacher6 from "draws/teachers/Teacher6";
+import SvgTeacher7 from "draws/teachers/Teacher7";
 import Card, { CardMedia } from "components/atoms/Card";
 import BreadCrumb from "components/atoms/BreadCrumb";
 
@@ -39,20 +39,19 @@ function buildCardTeachers() {
     "Gleen",
   ];
   const teachersAvatar = [
-    <Teacher1 />,
-    <Teacher2 />,
-    <Teacher3 />,
-    <Teacher4 />,
-    <Teacher5 />,
-    <Teacher6 />,
-    <Teacher7 />,
+    <SvgTeacher1 />,
+    <SvgTeacher2 />,
+    <SvgTeacher3 />,
+    <SvgTeacher4 />,
+    <SvgTeacher5 />,
+    <SvgTeacher6 />,
+    <SvgTeacher7 />,
   ];
   return Array(7)
     .fill({})
     .map((_, index) => (
       <Card key={index}>
         <CardMedia
-          svg={<Teacher1 />}
           children={
             <>
               {teachersAvatar[index]}
